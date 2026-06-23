@@ -17,14 +17,14 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute bottom-0 left-0 right-0 px-8 pb-16">
-          <h1 className="text-6xl font-bold leading-none tracking-tight text-white max-w-5xl">Brands that people root for.</h1>
+        <div className="absolute bottom-0 left-0 right-0 px-8 pb-32">
+          <h1 className="text-7xl md:text-9xl font-bold leading-none tracking-tight text-white max-w-5xl">Brands that people root for.</h1>
         </div>
       </section>
 
       <section className="px-8 py-20 border-t border-black/10">
         <div className="max-w-5xl">
-          <p className="text-[#0a0a0a]/60 text-lg max-w-xl leading-relaxed">
+          <p className="text-[#3a3a3a] text-lg max-w-xl leading-relaxed">
             BC Studio is a principal-led brand identity firm. Every project is led directly by the founder — no account managers, no junior hand-offs, just focused work on brands worth building.
           </p>
         </div>
