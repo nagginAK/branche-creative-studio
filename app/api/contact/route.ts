@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const TO_EMAIL = 'rene@branchecreative.co';
-const FROM_EMAIL = 'BC Studio <onboarding@resend.dev>';
+const TO_EMAIL = 'hello@timewalker.studio';
+const FROM_EMAIL = 'BC Studio <hello@timewalker.studio>';
+const BRAND_LABEL = 'BC Studio (branchecreative.co)';
 
 export async function POST(req: Request) {
   try {
@@ -30,8 +31,9 @@ export async function POST(req: Request) {
       from: FROM_EMAIL,
       to: TO_EMAIL,
       replyTo: email,
-      subject: `New contact form submission from ${name}`,
+      subject: `[${BRAND_LABEL}] New contact form submission from ${name}`,
       text: [
+        `Brand: ${BRAND_LABEL}`,
         `Name: ${name}`,
         `Email: ${email}`,
         `Phone: ${phone || 'Not provided'}`,
