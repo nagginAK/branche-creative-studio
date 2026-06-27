@@ -37,6 +37,7 @@ export default function Contact() {
         <div className="flex items-center gap-8 text-sm text-[#0a0a0a]/70">
           <Link href="/#services" className="hover:text-[#0a0a0a] transition-colors">Services</Link>
           <Link href="/#studio" className="hover:text-[#0a0a0a] transition-colors">Studio</Link>
+          <Link href="/contact" className="hover:text-[#0a0a0a] transition-colors">Contact</Link>
           <Link href="/contact" className="bg-[#0a0a0a] text-[#F2EDE4] px-6 py-2.5 text-sm font-medium whitespace-nowrap shrink-0 hover:bg-[#0a0a0a]/90 transition-colors">Start a Project</Link>
         </div>
       </nav>

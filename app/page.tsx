@@ -8,6 +8,7 @@ export default function Home() {
         <div className="flex items-center gap-8 text-sm text-white/70">
           <a href="#services" className="hover:text-white transition-colors">Services</a>
           <a href="#studio" className="hover:text-white transition-colors">Studio</a>
+          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           <Link href="/contact" className="bg-white text-black px-6 py-2.5 text-sm font-medium whitespace-nowrap shrink-0 hover:bg-white/90 transition-colors">Start a Project</Link>
         </div>
       </nav>
