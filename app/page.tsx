@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
@@ -6,7 +8,7 @@ export default function Home() {
         <div className="flex items-center gap-8 text-sm text-white/70">
           <a href="#services" className="hover:text-white transition-colors">Services</a>
           <a href="#studio" className="hover:text-white transition-colors">Studio</a>
-          <a href="#contact" className="bg-white text-black px-6 py-2.5 text-sm font-medium whitespace-nowrap shrink-0 hover:bg-white/90 transition-colors">Start a Project</a>
+          <Link href="/contact" className="bg-white text-black px-6 py-2.5 text-sm font-medium whitespace-nowrap shrink-0 hover:bg-white/90 transition-colors">Start a Project</Link>
         </div>
       </nav>
 
