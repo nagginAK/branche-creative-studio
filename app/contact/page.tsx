@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
@@ -32,15 +34,7 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-[#F2EDE4] border-b border-black/10">
-        <Link href="/" className="text-sm font-medium tracking-[0.2em] uppercase text-[#0a0a0a]">BC Studio</Link>
-        <div className="flex items-center gap-8 text-sm text-[#0a0a0a]/70">
-          <Link href="/#services" className="hover:text-[#0a0a0a] transition-colors">Services</Link>
-          <Link href="/#studio" className="hover:text-[#0a0a0a] transition-colors">Studio</Link>
-          <Link href="/contact" className="hover:text-[#0a0a0a] transition-colors">Contact</Link>
-          <Link href="/contact" className="bg-[#0a0a0a] text-[#F2EDE4] px-6 py-2.5 text-sm font-medium whitespace-nowrap shrink-0 hover:bg-[#0a0a0a]/90 transition-colors">Start a Project</Link>
-        </div>
-      </nav>
+      <Nav />
 
       <section className="px-8 pt-44 pb-16 border-b border-black/10">
         <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight max-w-3xl">Ready to build something serious?</h1>
@@ -123,10 +117,7 @@ export default function Contact() {
         </form>
       </section>
 
-      <footer className="px-8 py-12 border-t border-black/10 flex items-center justify-between text-[#0a0a0a]/40 text-sm">
-        <span>2026 BC Studio</span>
-        <span>A Timewalker Inc. vertical</span>
-      </footer>
+      <Footer />
     </main>
   );
 }

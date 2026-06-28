@@ -1,17 +1,11 @@
 import Link from 'next/link';
+import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-transparent border-b border-[#d4cfc8]">
-        <span className="text-sm font-medium tracking-[0.2em] uppercase text-white">BC Studio</span>
-        <div className="flex items-center gap-8 text-sm text-white/70">
-          <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#studio" className="hover:text-white transition-colors">Studio</a>
-          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-          <Link href="/contact" className="bg-white text-black px-6 py-2.5 text-sm font-medium whitespace-nowrap shrink-0 hover:bg-white/90 transition-colors">Start a Project</Link>
-        </div>
-      </nav>
+      <Nav transparent />
 
       <section className="relative w-full h-[80vh] overflow-hidden">
         <img
@@ -35,7 +29,10 @@ export default function Home() {
       </section>
 
       <section id="services" className="px-12 py-32 border-t border-black/10">
-        <h2 className="text-4xl font-bold mb-16">Services</h2>
+        <div className="flex items-end justify-between mb-16">
+          <h2 className="text-4xl font-bold">Services</h2>
+          <Link href="/services" className="text-sm text-[#0a0a0a]/60 hover:text-[#0a0a0a] transition-colors">Full pricing & details →</Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/10">
           <div className="bg-[#F2EDE4] p-10 flex flex-col gap-4">
             <h3 className="text-2xl font-medium">Brand Starter</h3>
@@ -71,9 +68,20 @@ export default function Home() {
       <section id="studio" className="px-8 py-32 border-t border-black/10">
         <div className="max-w-3xl">
           <h2 className="text-4xl font-bold mb-8">Small studio. Strong point of view.</h2>
-          <p className="text-[#0a0a0a]/60 text-lg leading-relaxed">
+          <p className="text-[#0a0a0a]/60 text-lg leading-relaxed mb-6">
             BC Studio is a Timewalker Inc. vertical, built around principal-led work. There&apos;s no layer between you and the person doing the thinking and the designing — just direct collaboration, clear opinions, and brand work that holds up.
           </p>
+          <Link href="/about" className="text-sm font-medium text-[#0a0a0a] border-b border-[#0a0a0a]/30 pb-1 hover:border-[#0a0a0a] transition-colors">More about the studio →</Link>
+        </div>
+      </section>
+
+      <section className="px-8 py-32 border-t border-black/10">
+        <div className="max-w-3xl">
+          <h2 className="text-4xl font-bold mb-8">Selected work</h2>
+          <p className="text-[#0a0a0a]/60 text-lg leading-relaxed mb-6">
+            From early-stage startups to established local businesses, every project gets the same close attention — strategy first, design second, execution that holds up everywhere it&apos;s seen.
+          </p>
+          <Link href="/work" className="text-sm font-medium text-[#0a0a0a] border-b border-[#0a0a0a]/30 pb-1 hover:border-[#0a0a0a] transition-colors">See the work →</Link>
         </div>
       </section>
 
@@ -84,10 +92,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="px-8 py-12 border-t border-black/10 flex items-center justify-between text-[#0a0a0a]/40 text-sm">
-        <span>2026 BC Studio</span>
-        <span>A Timewalker Inc. vertical</span>
-      </footer>
+      <Footer />
     </main>
   );
 }
