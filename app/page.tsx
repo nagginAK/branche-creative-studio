@@ -88,7 +88,13 @@ export default function Home() {
       <section id="contact" className="px-8 py-32 border-t border-black/10">
         <div className="max-w-xl">
           <h2 className="text-4xl font-bold mb-8">Ready to build something serious?</h2>
-          <a href="mailto:rene@branchecreative.co" className="inline-block bg-[#0a0a0a] text-[#F2EDE4] px-8 py-4 font-medium text-sm hover:bg-[#0a0a0a]/90 transition-colors">rene@branchecreative.co</a>
+          <div className="flex flex-col gap-6">
+            <a href="mailto:rene@branchecreative.co" className="inline-block bg-[#0a0a0a] text-[#F2EDE4] px-8 py-4 font-medium text-sm hover:bg-[#0a0a0a]/90 transition-colors self-start">rene@branchecreative.co</a>
+            <div className="border-t border-black/10 pt-6">
+              <p className="text-[#0a0a0a]/50 text-sm mb-4">Ready to commit? Secure your project with a deposit.</p>
+              <a href="https://buy.stripe.com/eVq28k7JA5Hy13cfDZbZe01" className="inline-block bg-[#0a0a0a] text-[#F2EDE4] px-8 py-4 font-medium text-sm hover:bg-[#0a0a0a]/90 transition-colors">Start Your Project — $1,500 Deposit</a>
+            </div>
+          </div>
         </div>
       </section>
 
