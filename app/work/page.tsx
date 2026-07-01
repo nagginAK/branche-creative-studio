@@ -4,22 +4,39 @@ import Footer from '@/components/Footer';
 
 const PROJECTS = [
   {
-    name: 'Sherel & Shawnel',
-    category: 'Brand Identity · Apparel',
+    name: 'VENTUS',
+    subtitle: 'Landscape & Grounds Services',
+    scope: 'Brand identity · Web design & development · Payment integration · Regional market expansion',
     summary:
-      'Full identity system for a South Florida apparel and print studio — logo suite, color system, and packaging built to work across screen-printed garments and digital storefronts alike.',
+      'Full digital infrastructure built from the ground up: brand identity, site architecture, and payment systems for a landscape maintenance company operating across South Florida and expanding into Guyana. Stripe-powered deposit collection lets clients book and pay in one flow.',
   },
   {
-    name: 'The Hustle Blueprint',
-    category: 'Brand Identity · Media',
+    name: 'RENEUTRA',
+    subtitle: 'Architecture & Construction Management',
+    scope: 'Brand identity · Web design & development · Service architecture',
     summary:
-      'Brand direction for an entrepreneurship and media platform — a flexible identity system designed to hold up across video, podcast cover art, and social content.',
+      'A design-build practice site built around clarity — service breakdowns, fee structure, and project process. Built to support both US and international project scopes.',
   },
   {
-    name: 'Architecture & CM',
-    category: 'Brand Identity · Construction',
+    name: 'MINOTIA',
+    subtitle: 'Retail Brand',
+    scope: 'Brand identity · Shopify storefront build · Product photography integration',
     summary:
-      'Identity and collateral system for a Florida design-build practice — built to read as established and trustworthy from the first client meeting through the final permit.',
+      'Full e-commerce build on Shopify, from brand board through storefront. Product catalog, checkout, and payments live end-to-end.',
+  },
+  {
+    name: 'CAFÉ SOLTAU',
+    subtitle: 'Wellness Café',
+    scope: 'Brand identity · Menu development · POS & payment integration · Order automation',
+    summary:
+      'Menu development, brand voice, and a complete Square POS build. Tested end-to-end — order to checkout to confirmation, notifications routed automatically.',
+  },
+  {
+    name: 'SHEREL & SHAWNEL',
+    subtitle: 'Apparel',
+    scope: 'Shopify storefront build · Payment integration',
+    summary:
+      'Shopify storefront built on Dawn theme, full product catalog, live payments from day one.',
   },
 ];
 
@@ -46,13 +63,24 @@ export default function Work() {
         >
           <div className="max-w-3xl">
             <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#0a0a0a]/40 mb-4">
-              {p.category}
+              {p.scope}
             </p>
-            <h2 className="text-3xl font-bold mb-4">{p.name}</h2>
+            <h2 className="text-3xl font-bold mb-1">{p.name}</h2>
+            <p className="text-base font-medium text-[#0a0a0a]/50 mb-5">{p.subtitle}</p>
             <p className="text-[#0a0a0a]/60 text-lg leading-relaxed">{p.summary}</p>
           </div>
         </section>
       ))}
+
+      <section className="px-8 py-20 border-t border-black/10 bg-[#0a0a0a] text-[#F2EDE4]">
+        <div className="max-w-2xl">
+          <p className="text-lg leading-relaxed text-[#F2EDE4]/80">
+            What typically takes an agency months, this studio delivers in days — full production
+            infrastructure, from brand identity through live payment systems, using a modern
+            AI-orchestrated development stack.
+          </p>
+        </div>
+      </section>
 
       <section className="px-8 py-24 border-t border-black/10">
         <div className="max-w-xl">
