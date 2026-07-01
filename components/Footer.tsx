@@ -7,6 +7,9 @@ export default function Footer() {
         <div className="flex flex-col gap-1">
           <span>© {new Date().getFullYear()} BC Studio</span>
           <span>A Timewalker Inc. vertical</span>
+          <a href="tel:+18888988213" className="hover:text-[#0a0a0a]/70 transition-colors">
+            (888) 898-8213
+          </a>
         </div>
 
         <div className="flex gap-6">

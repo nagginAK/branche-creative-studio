@@ -41,6 +41,9 @@ export default function Contact() {
         <p className="text-[#0a0a0a]/60 text-lg max-w-xl mt-6 leading-relaxed">
           Tell us a bit about your project and we&apos;ll get back to you within one business day.
         </p>
+        <a href="tel:+18888988213" className="inline-block text-sm font-medium text-[#0a0a0a]/50 hover:text-[#0a0a0a]/80 transition-colors mt-4">
+          (888) 898-8213
+        </a>
       </section>
 
       <section className="px-8 py-20">
