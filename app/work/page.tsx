@@ -42,15 +42,15 @@ const PROJECTS = [
 
 export default function Work() {
   return (
-    <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
+    <main className="min-h-screen bg-[#0E0B07] text-[#F2EDE4]">
       <Nav />
 
-      <section className="px-8 pt-44 pb-16 border-b border-black/10">
-        <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#0a0a0a]/40 mb-6">Work</p>
-        <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight max-w-3xl">
-          Selected projects.
+      <section className="px-8 lg:px-16 pt-44 pb-16 border-b border-[#F2EDE4]/10">
+        <p className="text-sm font-medium tracking-[0.25em] uppercase text-[#CDA850] mb-6">Work</p>
+        <h1 className="font-display text-6xl md:text-8xl leading-[1.02] tracking-tight max-w-3xl">
+          Selected <em className="text-[#E6C570]">projects</em>.
         </h1>
-        <p className="text-[#0a0a0a]/60 text-lg max-w-xl mt-6 leading-relaxed">
+        <p className="text-[#F2EDE4]/60 text-lg max-w-xl mt-6 leading-relaxed">
           A look at brands built under the BC Studio process — from
           early-stage ventures to growing local businesses.
         </p>
@@ -59,35 +59,35 @@ export default function Work() {
       {PROJECTS.map((p, i) => (
         <section
           key={p.name}
-          className={`px-8 py-20 ${i < PROJECTS.length - 1 ? 'border-b border-black/10' : ''}`}
+          className={`px-8 lg:px-16 py-20 ${i < PROJECTS.length - 1 ? 'border-b border-[#F2EDE4]/10' : ''}`}
         >
           <div className="max-w-3xl">
-            <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#0a0a0a]/40 mb-4">
+            <p className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#F2EDE4]/40 mb-4">
               {p.scope}
             </p>
-            <h2 className="text-3xl font-bold mb-1">{p.name}</h2>
-            <p className="text-base font-medium text-[#0a0a0a]/50 mb-5">{p.subtitle}</p>
-            <p className="text-[#0a0a0a]/60 text-lg leading-relaxed">{p.summary}</p>
+            <h2 className="font-display text-4xl mb-1">{p.name}</h2>
+            <p className="text-base text-[#E6C570] mb-5">{p.subtitle}</p>
+            <p className="text-[#F2EDE4]/60 text-lg leading-relaxed">{p.summary}</p>
           </div>
         </section>
       ))}
 
-      <section className="px-8 py-20 border-t border-black/10 bg-[#0a0a0a] text-[#F2EDE4]">
+      <section className="px-8 lg:px-16 py-20 border-t border-[#F2EDE4]/10 bg-[#161109]">
         <div className="max-w-2xl">
-          <p className="text-lg leading-relaxed text-[#F2EDE4]/80">
-            What typically takes an agency months, this studio delivers in days — full production
-            infrastructure, from brand identity through live payment systems, using a modern
-            AI-orchestrated development stack.
+          <p className="font-display text-2xl leading-snug text-[#F2EDE4]/90">
+            What typically takes an agency months, this studio delivers in
+            <em className="text-[#E6C570]"> days</em> — full production infrastructure, from
+            brand identity through live payment systems.
           </p>
         </div>
       </section>
 
-      <section className="px-8 py-24 border-t border-black/10">
+      <section className="px-8 lg:px-16 py-24 border-t border-[#F2EDE4]/10">
         <div className="max-w-xl">
-          <h2 className="text-3xl font-bold mb-6">Want to be the next one here?</h2>
+          <h2 className="font-display text-4xl mb-6">Want to be the next one here?</h2>
           <Link
             href="/contact"
-            className="inline-block bg-[#0a0a0a] text-[#F2EDE4] px-8 py-4 font-medium text-sm hover:bg-[#0a0a0a]/90 transition-colors"
+            className="inline-block bg-[#F2EDE4] text-[#0E0B07] px-8 py-4 font-medium text-sm hover:bg-[#E6C570] transition-colors"
           >
             Start a project
           </Link>

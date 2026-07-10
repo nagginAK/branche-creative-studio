@@ -31,15 +31,15 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
+    <main className="min-h-screen bg-[#0E0B07] text-[#F2EDE4]">
       <Nav />
 
-      <section className="px-8 pt-44 pb-16 border-b border-black/10">
-        <p className="text-sm font-medium tracking-[0.2em] uppercase text-[#0a0a0a]/40 mb-6">Services</p>
-        <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight max-w-3xl">
-          Pricing & packages.
+      <section className="px-8 lg:px-16 pt-44 pb-16 border-b border-[#F2EDE4]/10">
+        <p className="text-sm font-medium tracking-[0.25em] uppercase text-[#CDA850] mb-6">Services</p>
+        <h1 className="font-display text-6xl md:text-8xl leading-[1.02] tracking-tight max-w-3xl">
+          Pricing &amp; <em className="text-[#E6C570]">packages</em>.
         </h1>
-        <p className="text-[#0a0a0a]/60 text-lg max-w-xl mt-6 leading-relaxed">
+        <p className="text-[#F2EDE4]/60 text-lg max-w-xl mt-6 leading-relaxed">
           Every package starts with a conversation — these ranges reflect
           typical project scope, and final pricing is confirmed before any
           work begins.
@@ -49,32 +49,32 @@ export default function Services() {
       {SERVICES.map((s, i) => (
         <section
           key={s.name}
-          className={`px-8 py-16 ${i < SERVICES.length - 1 ? 'border-b border-black/10' : ''}`}
+          className={`px-8 lg:px-16 py-16 ${i < SERVICES.length - 1 ? 'border-b border-[#F2EDE4]/10' : ''}`}
         >
           <div className="max-w-3xl grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-start">
             <div>
-              <h2 className="text-3xl font-bold mb-3">{s.name}</h2>
-              <p className="text-[#0a0a0a]/60 text-lg leading-relaxed mb-6 max-w-xl">{s.body}</p>
+              <h2 className="font-display text-4xl mb-3">{s.name}</h2>
+              <p className="text-[#F2EDE4]/60 text-lg leading-relaxed mb-6 max-w-xl">{s.body}</p>
               <ul className="space-y-2">
                 {s.includes.map((item) => (
-                  <li key={item} className="text-sm text-[#0a0a0a]/60 flex items-center gap-2">
-                    <span className="w-1 h-1 bg-[#0a0a0a]/40 rounded-full shrink-0" />
+                  <li key={item} className="text-sm text-[#F2EDE4]/60 flex items-center gap-2">
+                    <span className="w-1 h-1 bg-[#CDA850] rounded-full shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <span className="text-2xl font-bold whitespace-nowrap">{s.price}</span>
+            <span className="text-2xl text-[#E6C570] whitespace-nowrap">{s.price}</span>
           </div>
         </section>
       ))}
 
-      <section className="px-8 py-24 border-t border-black/10">
+      <section className="px-8 lg:px-16 py-24 border-t border-[#F2EDE4]/10">
         <div className="max-w-xl">
-          <h2 className="text-3xl font-bold mb-6">Not sure which fits?</h2>
+          <h2 className="font-display text-4xl mb-6">Not sure which fits?</h2>
           <Link
             href="/contact"
-            className="inline-block bg-[#0a0a0a] text-[#F2EDE4] px-8 py-4 font-medium text-sm hover:bg-[#0a0a0a]/90 transition-colors"
+            className="inline-block bg-[#F2EDE4] text-[#0E0B07] px-8 py-4 font-medium text-sm hover:bg-[#E6C570] transition-colors"
           >
             Let&apos;s talk
           </Link>

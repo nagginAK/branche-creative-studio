@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
@@ -32,21 +31,26 @@ export default function Contact() {
     }
   };
 
+  const inputClass =
+    'w-full bg-transparent border border-[#F2EDE4]/15 focus:border-[#CDA850] px-4 py-3 text-[#F2EDE4] placeholder:text-[#F2EDE4]/25 outline-none transition-colors';
+
   return (
-    <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
+    <main className="min-h-screen bg-[#0E0B07] text-[#F2EDE4]">
       <Nav />
 
-      <section className="px-8 pt-44 pb-16 border-b border-black/10">
-        <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight max-w-3xl">Ready to build something serious?</h1>
-        <p className="text-[#0a0a0a]/60 text-lg max-w-xl mt-6 leading-relaxed">
+      <section className="px-8 lg:px-16 pt-44 pb-16 border-b border-[#F2EDE4]/10">
+        <h1 className="font-display text-6xl md:text-8xl leading-[1.02] tracking-tight max-w-3xl">
+          Ready to build something <em className="text-[#E6C570]">serious</em>?
+        </h1>
+        <p className="text-[#F2EDE4]/60 text-lg max-w-xl mt-6 leading-relaxed">
           Tell us a bit about your project and we&apos;ll get back to you within one business day.
         </p>
-        <a href="tel:+18888988213" className="inline-block text-sm font-medium text-[#0a0a0a]/50 hover:text-[#0a0a0a]/80 transition-colors mt-4">
+        <a href="tel:+18888988213" className="inline-block text-sm font-medium text-[#F2EDE4]/50 hover:text-[#E6C570] transition-colors mt-4">
           (888) 898-8213
         </a>
       </section>
 
-      <section className="px-8 py-20">
+      <section className="px-8 lg:px-16 py-20">
         <form onSubmit={handleSubmit} className="max-w-xl space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
@@ -57,7 +61,7 @@ export default function Contact() {
               required
               value={form.name}
               onChange={handleChange}
-              className="w-full bg-transparent border border-black/10 focus:border-black/40 px-4 py-3 text-[#0a0a0a] placeholder:text-[#0a0a0a]/30 outline-none transition-colors"
+              className={inputClass}
               placeholder="Your name"
             />
           </div>
@@ -71,7 +75,7 @@ export default function Contact() {
               required
               value={form.email}
               onChange={handleChange}
-              className="w-full bg-transparent border border-black/10 focus:border-black/40 px-4 py-3 text-[#0a0a0a] placeholder:text-[#0a0a0a]/30 outline-none transition-colors"
+              className={inputClass}
               placeholder="you@example.com"
             />
           </div>
@@ -84,7 +88,7 @@ export default function Contact() {
               type="tel"
               value={form.phone}
               onChange={handleChange}
-              className="w-full bg-transparent border border-black/10 focus:border-black/40 px-4 py-3 text-[#0a0a0a] placeholder:text-[#0a0a0a]/30 outline-none transition-colors"
+              className={inputClass}
               placeholder="(555) 555-5555"
             />
           </div>
@@ -98,7 +102,7 @@ export default function Contact() {
               rows={5}
               value={form.message}
               onChange={handleChange}
-              className="w-full bg-transparent border border-black/10 focus:border-black/40 px-4 py-3 text-[#0a0a0a] placeholder:text-[#0a0a0a]/30 outline-none transition-colors resize-none"
+              className={`${inputClass} resize-none`}
               placeholder="Tell us about your project"
             />
           </div>
@@ -106,16 +110,16 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === 'submitting'}
-            className="inline-block bg-[#0a0a0a] text-[#F2EDE4] px-8 py-4 font-medium text-sm hover:bg-[#0a0a0a]/90 transition-colors disabled:opacity-50"
+            className="inline-block bg-[#F2EDE4] text-[#0E0B07] px-8 py-4 font-medium text-sm hover:bg-[#E6C570] transition-colors disabled:opacity-50"
           >
             {status === 'submitting' ? 'Sending…' : 'Send Message'}
           </button>
 
           {status === 'success' && (
-            <p className="text-sm text-[#0a0a0a]/60 pt-2">Thanks — we&apos;ll be in touch soon.</p>
+            <p className="text-sm text-[#E6C570] pt-2">Thanks — we&apos;ll be in touch soon.</p>
           )}
           {status === 'error' && (
-            <p className="text-sm text-red-600 pt-2">Something went wrong. Please try again.</p>
+            <p className="text-sm text-red-400 pt-2">Something went wrong. Please try again.</p>
           )}
         </form>
       </section>
