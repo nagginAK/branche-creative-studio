@@ -7,14 +7,13 @@ export default function Home() {
     <main className="min-h-screen bg-[#F2EDE4] text-[#0a0a0a]">
       <Nav transparent />
 
-      <section className="relative w-full h-[80vh] overflow-hidden">
+      <section className="relative w-full h-[80vh] overflow-hidden bg-[#0E0B07]">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
-          alt="BC Studio"
+          src="/bc-studio-hero-bg.svg"
+          alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 px-8 pb-32">
           <h1 className="text-7xl md:text-9xl font-bold leading-none tracking-tight text-white max-w-5xl">Brands that people root for.</h1>
         </div>
