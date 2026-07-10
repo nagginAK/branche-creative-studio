@@ -9,11 +9,6 @@ export default function Home() {
 
       <section className="relative w-full h-[80vh] overflow-hidden">
         <img
-          src="/bc-studio-hero-bg.svg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-        />
-        <img
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80"
           alt="BC Studio"
           className="absolute inset-0 w-full h-full object-cover"
