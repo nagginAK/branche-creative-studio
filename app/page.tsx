@@ -63,11 +63,14 @@ export default function Home() {
 
       {/* STRIP */}
       <div className="bg-[#111111] text-[#F2F0EA]">
-        <div className="max-w-[1320px] mx-auto px-6 md:px-10 py-[22px] flex flex-wrap gap-x-10 gap-y-3 font-extrabold text-lg md:text-[22px] tracking-tight uppercase">
+        <div className="max-w-[1320px] mx-auto px-6 md:px-10 py-[22px] grid grid-cols-2 gap-x-6 gap-y-3 md:flex md:flex-wrap md:gap-x-10 font-extrabold text-base md:text-[22px] tracking-tight uppercase">
           {STRIP.map((s, i) => (
-            <span key={s} className="flex gap-10">
-              {i > 0 && <span aria-hidden="true" className="text-[#C9F03A]">✕</span>}
-              <span>{s}</span>
+            <span key={s} className="flex items-center gap-10">
+              {i > 0 && <span aria-hidden="true" className="hidden md:inline text-[#C9F03A]">✕</span>}
+              <span className="flex items-center gap-2.5">
+                <span aria-hidden="true" className="md:hidden inline-block w-2 h-2 bg-[#C9F03A]" />
+                {s}
+              </span>
             </span>
           ))}
         </div>
@@ -113,7 +116,7 @@ export default function Home() {
             {WORK.map((w) => (
               <Link key={w.name} href="/work" className={`group min-w-0 ${w.big ? 'md:col-span-2' : ''}`}>
                 <div
-                  className={`${w.big ? 'h-[460px]' : 'h-[360px]'} border-2 border-[#3A3A38] group-hover:border-[#C9F03A] transition-colors flex items-end p-8 bg-[#1C1C1A]`}
+                  className={`${w.big ? 'h-[240px] md:h-[460px]' : 'h-[200px] md:h-[360px]'} border-2 border-[#3A3A38] group-hover:border-[#C9F03A] transition-colors flex items-end p-8 bg-[#1C1C1A]`}
                 >
                   <span className="font-display text-[clamp(40px,5vw,72px)] leading-[0.9] group-hover:text-[#C9F03A] transition-colors">
                     {w.name}
@@ -146,8 +149,8 @@ export default function Home() {
       {/* STUDIO */}
       <section id="studio" className="border-y-2 border-[#111111]">
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 py-24 flex flex-wrap gap-14 items-center">
-          <div className="flex-1 basis-[380px] h-[440px] bg-[#111111] flex items-center justify-center">
-            <span className="font-display text-[160px] text-[#C9F03A] leading-none">BC</span>
+          <div className="flex-1 basis-[380px] h-[240px] md:h-[440px] bg-[#111111] flex items-center justify-center">
+            <span className="font-display text-[96px] md:text-[160px] text-[#C9F03A] leading-none">BC</span>
           </div>
           <div className="flex-[1.3] basis-[480px]">
             <div className="text-[13px] font-bold tracking-[0.12em] uppercase mb-5">The Studio</div>
