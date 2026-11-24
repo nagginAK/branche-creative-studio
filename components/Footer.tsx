@@ -16,13 +16,25 @@ export default function Footer() {
             <span className="text-[#BDBDB5]">South Florida</span>
           </div>
 
-          <div className="flex gap-16 text-[15px]">
+          <div className="flex flex-wrap gap-x-16 gap-y-10 text-[15px]">
             <div className="flex flex-col gap-2">
               <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#BDBDB5] mb-2">Site</span>
               <Link href="/services" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Services</Link>
               <Link href="/work" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Work</Link>
               <Link href="/about" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Studio</Link>
               <Link href="/contact" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Contact</Link>
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#BDBDB5] mb-2">Follow</span>
+              <a
+                href="https://www.facebook.com/profile.php?id=61596991886623"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors"
+              >
+                Facebook
+              </a>
+              {/* Instagram goes here once @bcstudiofl is live */}
             </div>
             <div className="flex flex-col gap-2">
               <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#BDBDB5] mb-2">Legal</span>

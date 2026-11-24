@@ -178,6 +178,14 @@ export default function Home() {
             <div className="mt-8 text-base leading-[1.9] font-semibold flex flex-col">
               <a href="mailto:rene@branchecreative.co" className="hover:underline">rene@branchecreative.co</a>
               <a href="tel:+18888988213" className="hover:underline">(888) 898-8213</a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61596991886623"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Facebook →
+              </a>
               <span>South Florida</span>
             </div>
             <div className="mt-10 pt-6 border-t-2 border-[#111111] max-w-[440px]">

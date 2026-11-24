@@ -16,6 +16,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.branchecreative.co"),
   title: "BC Studio — Branche Creative Studio",
   description:
     "Principal-led design studio. Brand identity, print, packaging, in-store media and motion for businesses that need to look as serious as they are. South Florida.",
