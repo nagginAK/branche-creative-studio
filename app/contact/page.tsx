@@ -32,25 +32,25 @@ export default function Contact() {
   };
 
   const inputClass =
-    'w-full bg-transparent border border-[#F2EDE4]/15 focus:border-[#CDA850] px-4 py-3 text-[#F2EDE4] placeholder:text-[#F2EDE4]/25 outline-none transition-colors';
+    'w-full bg-transparent border-2 border-[#111111] focus:border-[#111111] px-4 py-3 text-[#111111] placeholder:text-[#111111]/45 outline-none transition-colors';
 
   return (
-    <main className="min-h-screen bg-[#0E0B07] text-[#F2EDE4]">
+    <main className="min-h-screen bg-[#F2F0EA] text-[#111111]">
       <Nav />
 
-      <section className="px-8 lg:px-16 pt-44 pb-16 border-b border-[#F2EDE4]/10">
+      <section className="px-6 md:px-10 lg:px-16 pt-44 pb-16 border-b-2 border-[#111111]">
         <h1 className="font-display text-6xl md:text-8xl leading-[1.02] tracking-tight max-w-3xl">
-          Ready to build something <em className="text-[#E6C570]">serious</em>?
+          Ready to build something <em className="text-[#111111]">serious</em>?
         </h1>
-        <p className="text-[#F2EDE4]/60 text-lg max-w-xl mt-6 leading-relaxed">
+        <p className="text-[#111111]/75 text-lg max-w-xl mt-6 leading-relaxed">
           Tell us a bit about your project and we&apos;ll get back to you within one business day.
         </p>
-        <a href="tel:+18888988213" className="inline-block text-sm font-medium text-[#F2EDE4]/50 hover:text-[#E6C570] transition-colors mt-4">
+        <a href="tel:+18888988213" className="inline-block text-sm font-medium text-[#111111]/70 hover:text-[#555555] transition-colors mt-4">
           (888) 898-8213
         </a>
       </section>
 
-      <section className="px-8 lg:px-16 py-20">
+      <section className="px-6 md:px-10 lg:px-16 py-20">
         <form onSubmit={handleSubmit} className="max-w-xl space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
@@ -110,13 +110,13 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === 'submitting'}
-            className="inline-block bg-[#F2EDE4] text-[#0E0B07] px-8 py-4 font-medium text-sm hover:bg-[#E6C570] transition-colors disabled:opacity-50"
+            className="inline-block bg-[#111111] text-[#C9F03A] px-8 py-4 font-medium text-sm hover:bg-[#333333] transition-colors disabled:opacity-50"
           >
             {status === 'submitting' ? 'Sending…' : 'Send Message'}
           </button>
 
           {status === 'success' && (
-            <p className="text-sm text-[#E6C570] pt-2">Thanks — we&apos;ll be in touch soon.</p>
+            <p className="text-sm text-[#111111] pt-2">Thanks — we&apos;ll be in touch soon.</p>
           )}
           {status === 'error' && (
             <p className="text-sm text-red-400 pt-2">Something went wrong. Please try again.</p>

@@ -8,12 +8,12 @@ const PROJECTS = [
     subtitle: 'Landscape & Grounds Services',
     scope: 'Brand identity · Web design & development · Payment integration · Regional market expansion',
     summary:
-      'Full digital infrastructure built from the ground up: brand identity, site architecture, and payment systems for a landscape maintenance company operating across South Florida and expanding into Guyana. Stripe-powered deposit collection lets clients book and pay in one flow.',
+      'Full digital infrastructure built from the ground up: brand identity, site structure, and payment systems for a landscape maintenance company operating across South Florida and expanding into Guyana. Stripe-powered deposit collection lets clients book and pay in one flow.',
   },
   {
     name: 'RENEUTRA',
-    subtitle: 'Architecture & Construction Management',
-    scope: 'Brand identity · Web design & development · Service architecture',
+    subtitle: 'Design-Build & Construction Management',
+    scope: 'Brand identity · Web design & development · Service structure',
     summary:
       'A design-build practice site built around clarity — service breakdowns, fee structure, and project process. Built to support both US and international project scopes.',
   },
@@ -42,15 +42,15 @@ const PROJECTS = [
 
 export default function Work() {
   return (
-    <main className="min-h-screen bg-[#0E0B07] text-[#F2EDE4]">
+    <main className="min-h-screen bg-[#F2F0EA] text-[#111111]">
       <Nav />
 
-      <section className="px-8 lg:px-16 pt-44 pb-16 border-b border-[#F2EDE4]/10">
-        <p className="text-sm font-medium tracking-[0.25em] uppercase text-[#CDA850] mb-6">Work</p>
+      <section className="px-6 md:px-10 lg:px-16 pt-44 pb-16 border-b-2 border-[#111111]">
+        <p className="text-sm font-medium tracking-[0.25em] uppercase text-[#111111] mb-6">Work</p>
         <h1 className="font-display text-6xl md:text-8xl leading-[1.02] tracking-tight max-w-3xl">
-          Selected <em className="text-[#E6C570]">projects</em>.
+          Selected <em className="text-[#111111]">projects</em>.
         </h1>
-        <p className="text-[#F2EDE4]/60 text-lg max-w-xl mt-6 leading-relaxed">
+        <p className="text-[#111111]/75 text-lg max-w-xl mt-6 leading-relaxed">
           A look at brands built under the BC Studio process — from
           early-stage ventures to growing local businesses.
         </p>
@@ -59,35 +59,35 @@ export default function Work() {
       {PROJECTS.map((p, i) => (
         <section
           key={p.name}
-          className={`px-8 lg:px-16 py-20 ${i < PROJECTS.length - 1 ? 'border-b border-[#F2EDE4]/10' : ''}`}
+          className={`px-6 md:px-10 lg:px-16 py-20 ${i < PROJECTS.length - 1 ? 'border-b-2 border-[#111111]' : ''}`}
         >
           <div className="max-w-3xl">
-            <p className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#F2EDE4]/40 mb-4">
+            <p className="text-[13px] font-medium tracking-[0.2em] uppercase text-[#111111]/70 mb-4">
               {p.scope}
             </p>
             <h2 className="font-display text-4xl mb-1">{p.name}</h2>
-            <p className="text-base text-[#E6C570] mb-5">{p.subtitle}</p>
-            <p className="text-[#F2EDE4]/60 text-lg leading-relaxed">{p.summary}</p>
+            <p className="text-base text-[#111111] mb-5">{p.subtitle}</p>
+            <p className="text-[#111111]/75 text-lg leading-relaxed">{p.summary}</p>
           </div>
         </section>
       ))}
 
-      <section className="px-8 lg:px-16 py-20 border-t border-[#F2EDE4]/10 bg-[#161109]">
+      <section className="px-6 md:px-10 lg:px-16 py-20 border-t-2 border-[#111111] bg-[#C9F03A]">
         <div className="max-w-2xl">
-          <p className="font-display text-2xl leading-snug text-[#F2EDE4]/90">
+          <p className="font-display text-2xl leading-snug text-[#111111]">
             What typically takes an agency months, this studio delivers in
-            <em className="text-[#E6C570]"> days</em> — full production infrastructure, from
+            <em className="text-[#111111]"> days</em> — full production infrastructure, from
             brand identity through live payment systems.
           </p>
         </div>
       </section>
 
-      <section className="px-8 lg:px-16 py-24 border-t border-[#F2EDE4]/10">
+      <section className="px-6 md:px-10 lg:px-16 py-24 border-t-2 border-[#111111]">
         <div className="max-w-xl">
           <h2 className="font-display text-4xl mb-6">Want to be the next one here?</h2>
           <Link
             href="/contact"
-            className="inline-block bg-[#F2EDE4] text-[#0E0B07] px-8 py-4 font-medium text-sm hover:bg-[#E6C570] transition-colors"
+            className="inline-block bg-[#111111] text-[#C9F03A] px-8 py-4 font-medium text-sm hover:bg-[#333333] transition-colors"
           >
             Start a project
           </Link>

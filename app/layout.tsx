@@ -1,33 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
-import SideRail from "@/components/SideRail";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  axes: ["opsz"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
-  title: "BC Studio — Brand Identity & Creative Direction",
+  title: "BC Studio — Branche Creative Studio",
   description:
-    "Principal-led brand identity firm. Brand identity and design for businesses that mean business. South Florida.",
+    "Principal-led design studio. Brand identity, print, packaging, in-store media and motion for businesses that need to look as serious as they are. South Florida.",
   openGraph: {
-    title: "BC Studio — Brand Identity & Creative Direction",
+    title: "BC Studio — Branche Creative Studio",
     description:
-      "Principal-led brand identity firm. Brand identity and design for businesses that mean business.",
+      "Brand identity, print, packaging, in-store media and motion. Built to be seen. Made to last.",
     url: "https://www.branchecreative.co",
     siteName: "BC Studio",
     locale: "en_US",
@@ -43,10 +38,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${sourceSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#0E0B07] text-[#F2EDE4]">
-        <SideRail />
+      <body className="min-h-full flex flex-col bg-[#F2F0EA] text-[#111111]">
         {children}
       </body>
     </html>

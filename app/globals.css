@@ -1,37 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0E0B07;
-  --foreground: #F2EDE4;
-  --gold: #CDA850;
-  --gold-light: #E6C570;
+  --background: #F2F0EA;
+  --foreground: #111111;
+  --ink: #111111;
+  --paper: #F2F0EA;
+  --lime: #C9F03A;
+  --muted: #3A3A3A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-ink: #0E0B07;
-  --color-cream: #F2EDE4;
-  --color-gold: #CDA850;
-  --color-gold-light: #E6C570;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-fraunces);
+  --color-ink: #111111;
+  --color-paper: #F2F0EA;
+  --color-lime: #C9F03A;
+  --color-muted: #3A3A3A;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-source-serif);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: var(--gold);
-  color: var(--background);
+  background: var(--lime);
+  color: var(--ink);
 }
 
+/* Bold display headline: heavy, tight sans */
 .font-display {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-variation-settings: "opsz" 144;
-  letter-spacing: -0.01em;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+/* Italic accent words inside headlines switch to the serif */
+.font-display em,
+.font-serif-accent {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }

@@ -2,52 +2,44 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#F2EDE4]/10">
-      <div className="px-8 lg:px-16 py-20 flex flex-col md:flex-row items-start justify-between gap-10 relative overflow-hidden">
-        <span
-          aria-hidden="true"
-          className="font-display absolute -right-6 -bottom-24 text-[16rem] leading-none text-[#F2EDE4]/[0.04] select-none pointer-events-none"
-        >
-          B
-        </span>
+    <footer className="bg-[#111111] text-[#F2F0EA]">
+      <div className="max-w-[1320px] mx-auto px-6 md:px-10 pt-16 pb-10">
+        <div className="flex flex-col md:flex-row justify-between gap-10 mb-12">
+          <div className="flex flex-col gap-2 text-[15px]">
+            <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#BDBDB5] mb-2">Contact</span>
+            <a href="mailto:rene@branchecreative.co" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">
+              rene@branchecreative.co
+            </a>
+            <a href="tel:+18888988213" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">
+              (888) 898-8213
+            </a>
+            <span className="text-[#BDBDB5]">South Florida</span>
+          </div>
 
-        <div className="max-w-sm">
-          <p className="font-display text-3xl leading-snug mb-6">
-            Brand identity for businesses that <em className="text-[#E6C570]">mean business</em>.
-          </p>
-          <a
-            href="mailto:rene@branchecreative.co"
-            className="text-sm text-[#F2EDE4]/60 hover:text-[#E6C570] transition-colors"
-          >
-            rene@branchecreative.co
-          </a>
-          <br />
-          <a
-            href="tel:+18888988213"
-            className="text-sm text-[#F2EDE4]/60 hover:text-[#E6C570] transition-colors"
-          >
-            (888) 898-8213
-          </a>
+          <div className="flex gap-16 text-[15px]">
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#BDBDB5] mb-2">Site</span>
+              <Link href="/services" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Services</Link>
+              <Link href="/work" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Work</Link>
+              <Link href="/about" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Studio</Link>
+              <Link href="/contact" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Contact</Link>
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#BDBDB5] mb-2">Legal</span>
+              <Link href="/privacy" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-[#F2F0EA] hover:text-[#C9F03A] transition-colors">Terms of Service</Link>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-3 text-sm text-[#F2EDE4]/50">
-          <span className="text-[11px] tracking-[0.25em] uppercase text-[#F2EDE4]/30 mb-1">Site</span>
-          <Link href="/work" className="hover:text-[#F2EDE4] transition-colors">Work</Link>
-          <Link href="/services" className="hover:text-[#F2EDE4] transition-colors">Services</Link>
-          <Link href="/about" className="hover:text-[#F2EDE4] transition-colors">Studio</Link>
-          <Link href="/contact" className="hover:text-[#F2EDE4] transition-colors">Contact</Link>
+        <div className="font-display text-[clamp(72px,14vw,200px)] leading-[0.85] tracking-[-0.06em]">
+          BC Studio
         </div>
 
-        <div className="flex flex-col gap-3 text-sm text-[#F2EDE4]/50">
-          <span className="text-[11px] tracking-[0.25em] uppercase text-[#F2EDE4]/30 mb-1">Legal</span>
-          <Link href="/privacy" className="hover:text-[#F2EDE4] transition-colors">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-[#F2EDE4] transition-colors">Terms of Service</Link>
+        <div className="flex flex-col md:flex-row justify-between gap-3 mt-9 pt-6 border-t border-[#3A3A38] text-sm text-[#BDBDB5]">
+          <span>© {new Date().getFullYear()} Branche Creative Studio — a Timewalker Inc. company</span>
+          <span>Built to be seen. Made to last.</span>
         </div>
-      </div>
-
-      <div className="px-8 lg:px-16 py-6 border-t border-[#F2EDE4]/10 flex flex-col md:flex-row justify-between gap-2 text-[13px] text-[#F2EDE4]/30">
-        <span>© {new Date().getFullYear()} BC Studio — a Timewalker Inc. vertical</span>
-        <span>South Florida</span>
       </div>
     </footer>
   );
