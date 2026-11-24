@@ -75,9 +75,9 @@ export default function Work() {
       <section className="px-6 md:px-10 lg:px-16 py-20 border-t-2 border-[#111111] bg-[#C9F03A]">
         <div className="max-w-2xl">
           <p className="font-display text-2xl leading-snug text-[#111111]">
-            What typically takes an agency months, this studio delivers in
-            <em className="text-[#111111]"> days</em> — full production infrastructure, from
-            brand identity through live payment systems.
+            One studio, <em className="text-[#111111]">start to finish</em> — brand identity,
+            print, storefronts and live payment systems, built by the same hands that
+            designed them.
           </p>
         </div>
       </section>
