@@ -24,7 +24,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
           <span className="inline-flex items-center justify-center w-11 h-11 bg-[#111111] text-[#C9F03A] font-black text-[17px] tracking-tight">
             BC
           </span>
-          <span className="font-extrabold text-lg tracking-tight">BC Studio</span>
+          <span className="font-extrabold text-lg tracking-tight">BC Studio<sup className="text-[0.5em] font-semibold ml-0.5 align-super">™</sup></span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-[15px] font-medium">
